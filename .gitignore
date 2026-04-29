@@ -1,0 +1,22 @@
+# OS files
+**/.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Node
+node_modules/
+
+# Model weights (large files)
+models/audio/vocoder_artifacts/models/*.pth
+models/audio/vocoder_artifacts/temp_repo/
+
+# Artifacts
+walkthrough.md
+VERIFICATION.md
+sdk/.venv/
+sdk/deepsafe_sdk.egg-info/
+docs/superpowers
+public_dataset

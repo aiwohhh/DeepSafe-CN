@@ -1,0 +1,46 @@
+{
+  "api_url": "http://localhost:8000",
+  "media_types": {
+    "image": {
+      "model_endpoints": {
+        "npr_deepfakedetection": "http://npr_deepfakedetection:5001/predict",
+        "universalfakedetect": "http://universalfakedetect:5004/predict"
+      },
+      "health_endpoints": {
+        "npr_deepfakedetection": "http://npr_deepfakedetection:5001/health",
+        "universalfakedetect": "http://universalfakedetect:5004/health"
+      },
+      "supported_extensions": [
+        "*.jpg",
+        "*.jpeg",
+        "*.png",
+        "*.webp",
+        "*.bmp",
+        "*.gif",
+        "*.tiff",
+        "*.tif"
+      ]
+    },
+    "video": {
+      "model_endpoints": {
+        "cross_efficient_vit": "http://cross_efficient_vit:7001/predict"
+      },
+      "health_endpoints": {
+        "cross_efficient_vit": "http://cross_efficient_vit:7001/health"
+      },
+      "supported_extensions": [
+        "*.mp4",
+        "*.avi",
+        "*.mov",
+        "*.mkv"
+      ]
+    }
+  },
+  "default_output_dir_base": "./deepsafe_test_results",
+  "default_threshold": 0.5,
+  "default_ensemble_method": "voting",
+  "default_api_timeout_seconds": 1200,
+  "default_model_timeout_seconds_video": 1800,
+  "memory_optimization": true,
+  "default_max_workers_batch": 1
+}

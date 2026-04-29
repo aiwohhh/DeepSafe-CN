@@ -1,0 +1,10 @@
+fastapi==0.103.1
+uvicorn==0.23.2
+pillow>=9.2.0
+pydantic>=1.10.0
+numpy>=1.23.0,<2.0
+ftfy
+regex
+setuptools<70
+tqdm
+opencv-python-headless==4.8.1.78

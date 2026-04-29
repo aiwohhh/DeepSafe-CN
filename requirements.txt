@@ -1,0 +1,12 @@
+torch
+pillow
+requests
+rich
+pandas
+scikit-learn
+numpy
+matplotlib
+seaborn
+repo-to-text
+kaggle 
+tqdm

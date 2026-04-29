@@ -1,0 +1,20 @@
+name: cross_efficient_vit
+version: "1.0.0"
+media_type: video
+model_class: detector.CrossEfficientViTDetector
+port: 7001
+
+weights:
+  - url: ""
+    path: model_code/cross-efficient-vit/pretrained_models/cross_efficient_vit.pth
+    sha256: ""
+  - url: ""
+    path: model_code/efficient-vit/pretrained_models/efficient_vit.pth
+    sha256: ""
+
+environment:
+  PRELOAD_MODEL: "false"
+  MODEL_TIMEOUT: "900"
+  USE_GPU: "false"
+  DEFAULT_MODEL_VARIANT: "cross_efficient_vit"
+  FRAMES_PER_VIDEO: "15"

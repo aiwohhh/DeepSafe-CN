@@ -1,0 +1,15 @@
+name: npr_deepfakedetection
+version: "1.0.0"
+media_type: image
+model_class: detector.NPRDetector
+port: 5001
+
+weights:
+  - url: https://github.com/chuangchuangtan/NPR-DeepfakeDetection/raw/main/model_epoch_last_3090.pth
+    path: npr_deepfakedetection/weights/NPR.pth
+    sha256: ""
+
+environment:
+  PRELOAD_MODEL: "false"
+  MODEL_TIMEOUT: "600"
+  USE_GPU: "false"
