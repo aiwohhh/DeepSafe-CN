@@ -1,11 +1,43 @@
-/* frontend/src/App.css */
-/* Remove all previous styles. We will use Tailwind CSS utility classes. */
-/* If you have any truly global base styles that cannot be achieved via Tailwind's @layer base or index.css, they can go here. */
-/* For now, let's keep it minimal or empty. */
-
-/* Example of a global style if needed, but prefer Tailwind: */
-/*
-body {
-  font-family: 'Inter', sans-serif;
+.tech-bg {
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, #172554 0%, #020617 45%, #000 100%);
+  position: relative;
+  overflow-x: hidden;
 }
-*/
+
+.tech-bg::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(to bottom, rgba(59,130,246,0.06), rgba(59,130,246,0.06) 1px, transparent 1px, transparent 4px);
+  pointer-events: none;
+  animation: scan 8s linear infinite;
+}
+
+@keyframes scan {
+  from { transform: translateY(-6px); }
+  to { transform: translateY(6px); }
+}
+
+.topbar {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(12px);
+  background: rgba(2, 6, 23, 0.75);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.glass {
+  background: linear-gradient(135deg, rgba(30,41,59,0.6), rgba(15,23,42,0.45));
+  backdrop-filter: blur(10px);
+}
+
+.neon-border {
+  border: 1px solid rgba(96, 165, 250, 0.6);
+  box-shadow: 0 0 18px rgba(96, 165, 250, 0.35);
+}
